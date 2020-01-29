@@ -1,0 +1,13 @@
+C:\Users\hruan\OneDrive\Escritorio\BilliardsManager\BilliardsManager\bin\Debug\BilliardsManager.exe.config
+C:\Users\hruan\OneDrive\Escritorio\BilliardsManager\BilliardsManager\bin\Debug\BilliardsManager.exe
+C:\Users\hruan\OneDrive\Escritorio\BilliardsManager\BilliardsManager\bin\Debug\BilliardsManager.pdb
+C:\Users\hruan\OneDrive\Escritorio\BilliardsManager\BilliardsManager\bin\Debug\Fizzler.dll
+C:\Users\hruan\OneDrive\Escritorio\BilliardsManager\BilliardsManager\bin\Debug\Svg.dll
+C:\Users\hruan\OneDrive\Escritorio\BilliardsManager\BilliardsManager\bin\Debug\Svg.xml
+C:\Users\hruan\OneDrive\Escritorio\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.csprojAssemblyReference.cache
+C:\Users\hruan\OneDrive\Escritorio\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.Form1.resources
+C:\Users\hruan\OneDrive\Escritorio\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.Properties.Resources.resources
+C:\Users\hruan\OneDrive\Escritorio\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.csproj.GenerateResource.cache
+C:\Users\hruan\OneDrive\Escritorio\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.csproj.CopyComplete
+C:\Users\hruan\OneDrive\Escritorio\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.exe
+C:\Users\hruan\OneDrive\Escritorio\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.pdb
