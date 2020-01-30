@@ -11,3 +11,16 @@ C:\Users\hruan\OneDrive\Escritorio\BilliardsManager\BilliardsManager\obj\Debug\B
 C:\Users\hruan\OneDrive\Escritorio\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.csproj.CopyComplete
 C:\Users\hruan\OneDrive\Escritorio\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.exe
 C:\Users\hruan\OneDrive\Escritorio\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.pdb
+C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\bin\Debug\BilliardsManager.exe.config
+C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\bin\Debug\BilliardsManager.exe
+C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\bin\Debug\BilliardsManager.pdb
+C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\bin\Debug\Fizzler.dll
+C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\bin\Debug\Svg.dll
+C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\bin\Debug\Svg.xml
+C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.csprojAssemblyReference.cache
+C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.Form1.resources
+C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.Properties.Resources.resources
+C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.csproj.GenerateResource.cache
+C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.csproj.CopyComplete
+C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.exe
+C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.pdb
