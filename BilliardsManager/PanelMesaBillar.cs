@@ -13,12 +13,12 @@ namespace BilliardsManager
         public PanelMesaBillar():base()
         {
             this.BackgroundImage = global::BilliardsManager.Properties.Resources.table;
-            this.BackgroundImageLayout = ImageLayout.Stretch;
+            this.BackgroundImageLayout = ImageLayout.Zoom;
             this.Dock = DockStyle.Fill;
             this.MinimumSize = new Size(200,300);
             this.Padding = new Padding(35);
 
-            numero = new Label();
+            numero = new OutlinedLabel();
             numero.Dock = DockStyle.Fill;
             numero.Text = "1";
             numero.BackColor = Color.Transparent;
@@ -50,6 +50,16 @@ namespace BilliardsManager
 
                 Controls.Add(cronometro);
             }
+        }
+
+        public Label getNumero()
+        {
+            return numero;
+        }
+
+        public void setNumero(String numero)
+        {
+            this.numero.Text = numero;
         }
     }
 }
