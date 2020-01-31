@@ -1,0 +1,9 @@
+C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\bin\Release\BilliardsManager.exe.config
+C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\bin\Release\BilliardsManager.exe
+C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\bin\Release\BilliardsManager.pdb
+C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\obj\Release\BilliardsManager.csprojAssemblyReference.cache
+C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\obj\Release\BilliardsManager.Form1.resources
+C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\obj\Release\BilliardsManager.Properties.Resources.resources
+C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\obj\Release\BilliardsManager.csproj.GenerateResource.cache
+C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\obj\Release\BilliardsManager.exe
+C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\obj\Release\BilliardsManager.pdb

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,8 @@ namespace BilliardsManager
     {
         public Form1()
         {
+            Conector c = new Conector();
+
             InitializeComponent();
 
             label1.ForeColor = ColorTranslator.FromHtml("#24915e");
@@ -39,6 +42,18 @@ namespace BilliardsManager
             Mesa4.getNumero().ForeColor = Color.Black;
             Mesa5.getNumero().ForeColor = Color.Black;
             Mesa6.getNumero().ForeColor = Color.Black;
+            Mesa1.getCronometro().ForeColor = Color.Black;
+            Mesa2.getCronometro().ForeColor = Color.Black;
+            Mesa3.getCronometro().ForeColor = Color.Black;
+            Mesa4.getCronometro().ForeColor = Color.Black;
+            Mesa5.getCronometro().ForeColor = Color.Black;
+            Mesa6.getCronometro().ForeColor = Color.Black;
+            Mesa1.getCronometro().TextAlign = ContentAlignment.BottomLeft;
+            Mesa2.getCronometro().TextAlign = ContentAlignment.BottomLeft;
+            Mesa3.getCronometro().TextAlign = ContentAlignment.BottomLeft;
+            Mesa4.getCronometro().TextAlign = ContentAlignment.BottomLeft;
+            Mesa5.getCronometro().TextAlign = ContentAlignment.BottomLeft;
+            Mesa6.getCronometro().TextAlign = ContentAlignment.BottomLeft;
 
             mesaCocina.setNumero("Cocina");
             mesaBaño.setNumero("Baño");
@@ -114,6 +129,9 @@ namespace BilliardsManager
             previousTab();
         }
 
-        
+        private void Mesa1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

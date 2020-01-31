@@ -48,28 +48,28 @@ namespace BilliardsManager
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
-            this.mesaBillar1 = new BilliardsManager.PanelMesaBillar();
-            this.mesaBillar2 = new BilliardsManager.PanelMesaBillar();
-            this.mesaBillar3 = new BilliardsManager.PanelMesaBillar();
-            this.mesaBillar4 = new BilliardsManager.PanelMesaBillar();
-            this.mesaBillar5 = new BilliardsManager.PanelMesaBillar();
-            this.mesaBillar6 = new BilliardsManager.PanelMesaBillar();
-            this.mesaBillar7 = new BilliardsManager.PanelMesaBillar();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.Mesa1 = new BilliardsManager.PanelMesaBillar();
-            this.Mesa2 = new BilliardsManager.PanelMesaBillar();
-            this.Mesa3 = new BilliardsManager.PanelMesaBillar();
-            this.Mesa4 = new BilliardsManager.PanelMesaBillar();
-            this.Mesa5 = new BilliardsManager.PanelMesaBillar();
-            this.Mesa6 = new BilliardsManager.PanelMesaBillar();
-            this.mesaVarios = new BilliardsManager.PanelMesaBillar();
-            this.mesaCocina = new BilliardsManager.PanelMesaBillar();
-            this.mesaBaño = new BilliardsManager.PanelMesaBillar();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.mesaBillar1 = new BilliardsManager.Mesa();
+            this.mesaBillar2 = new BilliardsManager.Mesa();
+            this.mesaBillar3 = new BilliardsManager.Mesa();
+            this.mesaBillar4 = new BilliardsManager.Mesa();
+            this.mesaBillar5 = new BilliardsManager.Mesa();
+            this.mesaBillar6 = new BilliardsManager.Mesa();
+            this.mesaBillar7 = new BilliardsManager.Mesa();
+            this.Mesa1 = new BilliardsManager.Mesa();
+            this.Mesa2 = new BilliardsManager.Mesa();
+            this.Mesa3 = new BilliardsManager.Mesa();
+            this.Mesa4 = new BilliardsManager.Mesa();
+            this.Mesa5 = new BilliardsManager.Mesa();
+            this.Mesa6 = new BilliardsManager.Mesa();
+            this.mesaVarios = new BilliardsManager.Mesa();
+            this.mesaCocina = new BilliardsManager.Mesa();
+            this.mesaBaño = new BilliardsManager.Mesa();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -102,7 +102,7 @@ namespace BilliardsManager
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(969, 654);
+            this.tabControl1.Size = new System.Drawing.Size(930, 557);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 0;
             // 
@@ -112,7 +112,7 @@ namespace BilliardsManager
             this.tabPage1.Location = new System.Drawing.Point(4, 5);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(961, 645);
+            this.tabPage1.Size = new System.Drawing.Size(922, 548);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -141,7 +141,7 @@ namespace BilliardsManager
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(955, 639);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(916, 542);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // panel1
@@ -151,7 +151,7 @@ namespace BilliardsManager
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(949, 100);
+            this.panel1.Size = new System.Drawing.Size(893, 100);
             this.panel1.TabIndex = 10;
             // 
             // tableLayoutPanel2
@@ -169,7 +169,7 @@ namespace BilliardsManager
             this.tableLayoutPanel2.Padding = new System.Windows.Forms.Padding(20);
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(949, 100);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(893, 100);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // label1
@@ -177,9 +177,9 @@ namespace BilliardsManager
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.25F);
-            this.label1.Location = new System.Drawing.Point(159, 20);
+            this.label1.Location = new System.Drawing.Point(150, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(630, 60);
+            this.label1.Size = new System.Drawing.Size(591, 60);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mesas de Billar";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -190,7 +190,7 @@ namespace BilliardsManager
             this.tabPage2.Location = new System.Drawing.Point(4, 5);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(961, 645);
+            this.tabPage2.Size = new System.Drawing.Size(802, 591);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -216,7 +216,7 @@ namespace BilliardsManager
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(955, 639);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(796, 585);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // panel2
@@ -226,7 +226,7 @@ namespace BilliardsManager
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(949, 100);
+            this.panel2.Size = new System.Drawing.Size(773, 100);
             this.panel2.TabIndex = 11;
             // 
             // tableLayoutPanel4
@@ -244,7 +244,7 @@ namespace BilliardsManager
             this.tableLayoutPanel4.Padding = new System.Windows.Forms.Padding(20);
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(949, 100);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(773, 100);
             this.tableLayoutPanel4.TabIndex = 0;
             this.tableLayoutPanel4.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel4_Paint);
             // 
@@ -253,9 +253,9 @@ namespace BilliardsManager
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.25F);
-            this.label2.Location = new System.Drawing.Point(159, 20);
+            this.label2.Location = new System.Drawing.Point(132, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(630, 60);
+            this.label2.Size = new System.Drawing.Size(507, 60);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mesas";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -265,7 +265,7 @@ namespace BilliardsManager
             this.tabPage3.Controls.Add(this.tableLayoutPanel5);
             this.tabPage3.Location = new System.Drawing.Point(4, 5);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(961, 645);
+            this.tabPage3.Size = new System.Drawing.Size(802, 591);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -288,7 +288,7 @@ namespace BilliardsManager
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(961, 645);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(802, 591);
             this.tableLayoutPanel5.TabIndex = 2;
             // 
             // panel3
@@ -298,7 +298,7 @@ namespace BilliardsManager
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(955, 100);
+            this.panel3.Size = new System.Drawing.Size(779, 100);
             this.panel3.TabIndex = 10;
             // 
             // tableLayoutPanel6
@@ -316,7 +316,7 @@ namespace BilliardsManager
             this.tableLayoutPanel6.Padding = new System.Windows.Forms.Padding(20);
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(955, 100);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(779, 100);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
             // label3
@@ -325,108 +325,21 @@ namespace BilliardsManager
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.25F);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(160, 20);
+            this.label3.Location = new System.Drawing.Point(133, 20);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(634, 60);
+            this.label3.Size = new System.Drawing.Size(511, 60);
             this.label3.TabIndex = 0;
             this.label3.Text = "Otros";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // mesaBillar1
-            // 
-            this.mesaBillar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mesaBillar1.BackgroundImage")));
-            this.mesaBillar1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.mesaBillar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mesaBillar1.Location = new System.Drawing.Point(3, 136);
-            this.mesaBillar1.Margin = new System.Windows.Forms.Padding(3, 30, 3, 3);
-            this.mesaBillar1.MinimumSize = new System.Drawing.Size(200, 300);
-            this.mesaBillar1.Name = "mesaBillar1";
-            this.mesaBillar1.Padding = new System.Windows.Forms.Padding(35);
-            this.mesaBillar1.Size = new System.Drawing.Size(471, 300);
-            this.mesaBillar1.TabIndex = 2;
-            // 
-            // mesaBillar2
-            // 
-            this.mesaBillar2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mesaBillar2.BackgroundImage")));
-            this.mesaBillar2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.mesaBillar2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mesaBillar2.Location = new System.Drawing.Point(480, 136);
-            this.mesaBillar2.Margin = new System.Windows.Forms.Padding(3, 30, 3, 3);
-            this.mesaBillar2.MinimumSize = new System.Drawing.Size(200, 300);
-            this.mesaBillar2.Name = "mesaBillar2";
-            this.mesaBillar2.Padding = new System.Windows.Forms.Padding(35);
-            this.mesaBillar2.Size = new System.Drawing.Size(472, 300);
-            this.mesaBillar2.TabIndex = 3;
-            // 
-            // mesaBillar3
-            // 
-            this.mesaBillar3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mesaBillar3.BackgroundImage")));
-            this.mesaBillar3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.mesaBillar3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mesaBillar3.Location = new System.Drawing.Point(3, 442);
-            this.mesaBillar3.MinimumSize = new System.Drawing.Size(200, 300);
-            this.mesaBillar3.Name = "mesaBillar3";
-            this.mesaBillar3.Padding = new System.Windows.Forms.Padding(35);
-            this.mesaBillar3.Size = new System.Drawing.Size(471, 300);
-            this.mesaBillar3.TabIndex = 4;
-            // 
-            // mesaBillar4
-            // 
-            this.mesaBillar4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mesaBillar4.BackgroundImage")));
-            this.mesaBillar4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.mesaBillar4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mesaBillar4.Location = new System.Drawing.Point(480, 442);
-            this.mesaBillar4.MinimumSize = new System.Drawing.Size(200, 300);
-            this.mesaBillar4.Name = "mesaBillar4";
-            this.mesaBillar4.Padding = new System.Windows.Forms.Padding(35);
-            this.mesaBillar4.Size = new System.Drawing.Size(472, 300);
-            this.mesaBillar4.TabIndex = 5;
-            // 
-            // mesaBillar5
-            // 
-            this.mesaBillar5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mesaBillar5.BackgroundImage")));
-            this.mesaBillar5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.mesaBillar5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mesaBillar5.Location = new System.Drawing.Point(3, 748);
-            this.mesaBillar5.MinimumSize = new System.Drawing.Size(200, 300);
-            this.mesaBillar5.Name = "mesaBillar5";
-            this.mesaBillar5.Padding = new System.Windows.Forms.Padding(35);
-            this.mesaBillar5.Size = new System.Drawing.Size(471, 300);
-            this.mesaBillar5.TabIndex = 6;
-            // 
-            // mesaBillar6
-            // 
-            this.mesaBillar6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mesaBillar6.BackgroundImage")));
-            this.mesaBillar6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.mesaBillar6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mesaBillar6.Location = new System.Drawing.Point(480, 748);
-            this.mesaBillar6.MinimumSize = new System.Drawing.Size(200, 300);
-            this.mesaBillar6.Name = "mesaBillar6";
-            this.mesaBillar6.Padding = new System.Windows.Forms.Padding(35);
-            this.mesaBillar6.Size = new System.Drawing.Size(472, 300);
-            this.mesaBillar6.TabIndex = 7;
-            // 
-            // mesaBillar7
-            // 
-            this.mesaBillar7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mesaBillar7.BackgroundImage")));
-            this.mesaBillar7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.tableLayoutPanel1.SetColumnSpan(this.mesaBillar7, 2);
-            this.mesaBillar7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mesaBillar7.Location = new System.Drawing.Point(3, 1054);
-            this.mesaBillar7.MinimumSize = new System.Drawing.Size(200, 300);
-            this.mesaBillar7.Name = "mesaBillar7";
-            this.mesaBillar7.Padding = new System.Windows.Forms.Padding(35);
-            this.mesaBillar7.Size = new System.Drawing.Size(949, 300);
-            this.mesaBillar7.TabIndex = 8;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = global::BilliardsManager.Properties.Resources.derecha;
-            this.pictureBox2.Location = new System.Drawing.Point(795, 23);
+            this.pictureBox2.Location = new System.Drawing.Point(747, 23);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Padding = new System.Windows.Forms.Padding(10);
-            this.pictureBox2.Size = new System.Drawing.Size(131, 54);
+            this.pictureBox2.Size = new System.Drawing.Size(123, 54);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
@@ -439,7 +352,7 @@ namespace BilliardsManager
             this.pictureBox1.Location = new System.Drawing.Point(23, 23);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Padding = new System.Windows.Forms.Padding(10);
-            this.pictureBox1.Size = new System.Drawing.Size(130, 54);
+            this.pictureBox1.Size = new System.Drawing.Size(121, 54);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -448,10 +361,10 @@ namespace BilliardsManager
             // 
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(795, 23);
+            this.pictureBox3.Location = new System.Drawing.Point(645, 23);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Padding = new System.Windows.Forms.Padding(10);
-            this.pictureBox3.Size = new System.Drawing.Size(131, 54);
+            this.pictureBox3.Size = new System.Drawing.Size(105, 54);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
@@ -464,134 +377,21 @@ namespace BilliardsManager
             this.pictureBox4.Location = new System.Drawing.Point(23, 23);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Padding = new System.Windows.Forms.Padding(10);
-            this.pictureBox4.Size = new System.Drawing.Size(130, 54);
+            this.pictureBox4.Size = new System.Drawing.Size(103, 54);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 1;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
-            // Mesa1
-            // 
-            this.Mesa1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Mesa1.BackgroundImage")));
-            this.Mesa1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Mesa1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Mesa1.Location = new System.Drawing.Point(3, 136);
-            this.Mesa1.Margin = new System.Windows.Forms.Padding(3, 30, 3, 3);
-            this.Mesa1.MinimumSize = new System.Drawing.Size(200, 300);
-            this.Mesa1.Name = "Mesa1";
-            this.Mesa1.Padding = new System.Windows.Forms.Padding(35);
-            this.Mesa1.Size = new System.Drawing.Size(471, 300);
-            this.Mesa1.TabIndex = 12;
-            // 
-            // Mesa2
-            // 
-            this.Mesa2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Mesa2.BackgroundImage")));
-            this.Mesa2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Mesa2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Mesa2.Location = new System.Drawing.Point(480, 136);
-            this.Mesa2.Margin = new System.Windows.Forms.Padding(3, 30, 3, 3);
-            this.Mesa2.MinimumSize = new System.Drawing.Size(200, 300);
-            this.Mesa2.Name = "Mesa2";
-            this.Mesa2.Padding = new System.Windows.Forms.Padding(35);
-            this.Mesa2.Size = new System.Drawing.Size(472, 300);
-            this.Mesa2.TabIndex = 13;
-            // 
-            // Mesa3
-            // 
-            this.Mesa3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Mesa3.BackgroundImage")));
-            this.Mesa3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Mesa3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Mesa3.Location = new System.Drawing.Point(3, 442);
-            this.Mesa3.MinimumSize = new System.Drawing.Size(200, 300);
-            this.Mesa3.Name = "Mesa3";
-            this.Mesa3.Padding = new System.Windows.Forms.Padding(35);
-            this.Mesa3.Size = new System.Drawing.Size(471, 300);
-            this.Mesa3.TabIndex = 14;
-            // 
-            // Mesa4
-            // 
-            this.Mesa4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Mesa4.BackgroundImage")));
-            this.Mesa4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Mesa4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Mesa4.Location = new System.Drawing.Point(480, 442);
-            this.Mesa4.MinimumSize = new System.Drawing.Size(200, 300);
-            this.Mesa4.Name = "Mesa4";
-            this.Mesa4.Padding = new System.Windows.Forms.Padding(35);
-            this.Mesa4.Size = new System.Drawing.Size(472, 300);
-            this.Mesa4.TabIndex = 15;
-            // 
-            // Mesa5
-            // 
-            this.Mesa5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Mesa5.BackgroundImage")));
-            this.Mesa5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Mesa5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Mesa5.Location = new System.Drawing.Point(3, 748);
-            this.Mesa5.MinimumSize = new System.Drawing.Size(200, 300);
-            this.Mesa5.Name = "Mesa5";
-            this.Mesa5.Padding = new System.Windows.Forms.Padding(35);
-            this.Mesa5.Size = new System.Drawing.Size(471, 300);
-            this.Mesa5.TabIndex = 16;
-            // 
-            // Mesa6
-            // 
-            this.Mesa6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Mesa6.BackgroundImage")));
-            this.Mesa6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Mesa6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Mesa6.Location = new System.Drawing.Point(480, 748);
-            this.Mesa6.MinimumSize = new System.Drawing.Size(200, 300);
-            this.Mesa6.Name = "Mesa6";
-            this.Mesa6.Padding = new System.Windows.Forms.Padding(35);
-            this.Mesa6.Size = new System.Drawing.Size(472, 300);
-            this.Mesa6.TabIndex = 17;
-            // 
-            // mesaVarios
-            // 
-            this.mesaVarios.BackgroundImage = global::BilliardsManager.Properties.Resources.varios1;
-            this.mesaVarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.tableLayoutPanel5.SetColumnSpan(this.mesaVarios, 2);
-            this.mesaVarios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mesaVarios.Location = new System.Drawing.Point(3, 442);
-            this.mesaVarios.MinimumSize = new System.Drawing.Size(200, 300);
-            this.mesaVarios.Name = "mesaVarios";
-            this.mesaVarios.Padding = new System.Windows.Forms.Padding(35);
-            this.mesaVarios.Size = new System.Drawing.Size(955, 300);
-            this.mesaVarios.TabIndex = 11;
-            // 
-            // mesaCocina
-            // 
-            this.mesaCocina.BackgroundImage = global::BilliardsManager.Properties.Resources.varios1;
-            this.mesaCocina.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.mesaCocina.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mesaCocina.Location = new System.Drawing.Point(3, 136);
-            this.mesaCocina.Margin = new System.Windows.Forms.Padding(3, 30, 3, 3);
-            this.mesaCocina.MinimumSize = new System.Drawing.Size(200, 300);
-            this.mesaCocina.Name = "mesaCocina";
-            this.mesaCocina.Padding = new System.Windows.Forms.Padding(35);
-            this.mesaCocina.Size = new System.Drawing.Size(474, 300);
-            this.mesaCocina.TabIndex = 2;
-            // 
-            // mesaBaño
-            // 
-            this.mesaBaño.BackgroundImage = global::BilliardsManager.Properties.Resources.varios1;
-            this.mesaBaño.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.mesaBaño.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mesaBaño.Location = new System.Drawing.Point(483, 136);
-            this.mesaBaño.Margin = new System.Windows.Forms.Padding(3, 30, 3, 3);
-            this.mesaBaño.MinimumSize = new System.Drawing.Size(200, 300);
-            this.mesaBaño.Name = "mesaBaño";
-            this.mesaBaño.Padding = new System.Windows.Forms.Padding(35);
-            this.mesaBaño.Size = new System.Drawing.Size(475, 300);
-            this.mesaBaño.TabIndex = 3;
             // 
             // pictureBox5
             // 
             this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox5.ErrorImage = null;
             this.pictureBox5.Image = global::BilliardsManager.Properties.Resources.derecha3;
-            this.pictureBox5.Location = new System.Drawing.Point(800, 23);
+            this.pictureBox5.Location = new System.Drawing.Point(650, 23);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Padding = new System.Windows.Forms.Padding(10);
-            this.pictureBox5.Size = new System.Drawing.Size(132, 54);
+            this.pictureBox5.Size = new System.Drawing.Size(106, 54);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 2;
             this.pictureBox5.TabStop = false;
@@ -605,17 +405,218 @@ namespace BilliardsManager
             this.pictureBox6.Location = new System.Drawing.Point(23, 23);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Padding = new System.Windows.Forms.Padding(10);
-            this.pictureBox6.Size = new System.Drawing.Size(131, 54);
+            this.pictureBox6.Size = new System.Drawing.Size(104, 54);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 1;
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
+            // mesaBillar1
+            // 
+            this.mesaBillar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mesaBillar1.BackgroundImage")));
+            this.mesaBillar1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mesaBillar1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mesaBillar1.Location = new System.Drawing.Point(3, 136);
+            this.mesaBillar1.Margin = new System.Windows.Forms.Padding(3, 30, 3, 3);
+            this.mesaBillar1.MinimumSize = new System.Drawing.Size(200, 300);
+            this.mesaBillar1.Name = "mesaBillar1";
+            this.mesaBillar1.Padding = new System.Windows.Forms.Padding(35);
+            this.mesaBillar1.Size = new System.Drawing.Size(443, 300);
+            this.mesaBillar1.TabIndex = 2;
+            // 
+            // mesaBillar2
+            // 
+            this.mesaBillar2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mesaBillar2.BackgroundImage")));
+            this.mesaBillar2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mesaBillar2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mesaBillar2.Location = new System.Drawing.Point(452, 136);
+            this.mesaBillar2.Margin = new System.Windows.Forms.Padding(3, 30, 3, 3);
+            this.mesaBillar2.MinimumSize = new System.Drawing.Size(200, 300);
+            this.mesaBillar2.Name = "mesaBillar2";
+            this.mesaBillar2.Padding = new System.Windows.Forms.Padding(35);
+            this.mesaBillar2.Size = new System.Drawing.Size(444, 300);
+            this.mesaBillar2.TabIndex = 3;
+            // 
+            // mesaBillar3
+            // 
+            this.mesaBillar3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mesaBillar3.BackgroundImage")));
+            this.mesaBillar3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mesaBillar3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mesaBillar3.Location = new System.Drawing.Point(3, 442);
+            this.mesaBillar3.MinimumSize = new System.Drawing.Size(200, 300);
+            this.mesaBillar3.Name = "mesaBillar3";
+            this.mesaBillar3.Padding = new System.Windows.Forms.Padding(35);
+            this.mesaBillar3.Size = new System.Drawing.Size(443, 300);
+            this.mesaBillar3.TabIndex = 4;
+            // 
+            // mesaBillar4
+            // 
+            this.mesaBillar4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mesaBillar4.BackgroundImage")));
+            this.mesaBillar4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mesaBillar4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mesaBillar4.Location = new System.Drawing.Point(452, 442);
+            this.mesaBillar4.MinimumSize = new System.Drawing.Size(200, 300);
+            this.mesaBillar4.Name = "mesaBillar4";
+            this.mesaBillar4.Padding = new System.Windows.Forms.Padding(35);
+            this.mesaBillar4.Size = new System.Drawing.Size(444, 300);
+            this.mesaBillar4.TabIndex = 5;
+            // 
+            // mesaBillar5
+            // 
+            this.mesaBillar5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mesaBillar5.BackgroundImage")));
+            this.mesaBillar5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mesaBillar5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mesaBillar5.Location = new System.Drawing.Point(3, 748);
+            this.mesaBillar5.MinimumSize = new System.Drawing.Size(200, 300);
+            this.mesaBillar5.Name = "mesaBillar5";
+            this.mesaBillar5.Padding = new System.Windows.Forms.Padding(35);
+            this.mesaBillar5.Size = new System.Drawing.Size(443, 300);
+            this.mesaBillar5.TabIndex = 6;
+            // 
+            // mesaBillar6
+            // 
+            this.mesaBillar6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mesaBillar6.BackgroundImage")));
+            this.mesaBillar6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mesaBillar6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mesaBillar6.Location = new System.Drawing.Point(452, 748);
+            this.mesaBillar6.MinimumSize = new System.Drawing.Size(200, 300);
+            this.mesaBillar6.Name = "mesaBillar6";
+            this.mesaBillar6.Padding = new System.Windows.Forms.Padding(35);
+            this.mesaBillar6.Size = new System.Drawing.Size(444, 300);
+            this.mesaBillar6.TabIndex = 7;
+            // 
+            // mesaBillar7
+            // 
+            this.mesaBillar7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mesaBillar7.BackgroundImage")));
+            this.mesaBillar7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tableLayoutPanel1.SetColumnSpan(this.mesaBillar7, 2);
+            this.mesaBillar7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mesaBillar7.Location = new System.Drawing.Point(3, 1054);
+            this.mesaBillar7.MinimumSize = new System.Drawing.Size(200, 300);
+            this.mesaBillar7.Name = "mesaBillar7";
+            this.mesaBillar7.Padding = new System.Windows.Forms.Padding(70, 40, 70, 40);
+            this.mesaBillar7.Size = new System.Drawing.Size(893, 300);
+            this.mesaBillar7.TabIndex = 8;
+            // 
+            // Mesa1
+            // 
+            this.Mesa1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Mesa1.BackgroundImage")));
+            this.Mesa1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Mesa1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Mesa1.Location = new System.Drawing.Point(3, 136);
+            this.Mesa1.Margin = new System.Windows.Forms.Padding(3, 30, 3, 3);
+            this.Mesa1.MinimumSize = new System.Drawing.Size(200, 300);
+            this.Mesa1.Name = "Mesa1";
+            this.Mesa1.Padding = new System.Windows.Forms.Padding(35);
+            this.Mesa1.Size = new System.Drawing.Size(383, 300);
+            this.Mesa1.TabIndex = 12;
+            this.Mesa1.Paint += new System.Windows.Forms.PaintEventHandler(this.Mesa1_Paint);
+            // 
+            // Mesa2
+            // 
+            this.Mesa2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Mesa2.BackgroundImage")));
+            this.Mesa2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Mesa2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Mesa2.Location = new System.Drawing.Point(392, 136);
+            this.Mesa2.Margin = new System.Windows.Forms.Padding(3, 30, 3, 3);
+            this.Mesa2.MinimumSize = new System.Drawing.Size(200, 300);
+            this.Mesa2.Name = "Mesa2";
+            this.Mesa2.Padding = new System.Windows.Forms.Padding(35);
+            this.Mesa2.Size = new System.Drawing.Size(384, 300);
+            this.Mesa2.TabIndex = 13;
+            // 
+            // Mesa3
+            // 
+            this.Mesa3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Mesa3.BackgroundImage")));
+            this.Mesa3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Mesa3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Mesa3.Location = new System.Drawing.Point(3, 442);
+            this.Mesa3.MinimumSize = new System.Drawing.Size(200, 300);
+            this.Mesa3.Name = "Mesa3";
+            this.Mesa3.Padding = new System.Windows.Forms.Padding(35);
+            this.Mesa3.Size = new System.Drawing.Size(383, 300);
+            this.Mesa3.TabIndex = 14;
+            // 
+            // Mesa4
+            // 
+            this.Mesa4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Mesa4.BackgroundImage")));
+            this.Mesa4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Mesa4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Mesa4.Location = new System.Drawing.Point(392, 442);
+            this.Mesa4.MinimumSize = new System.Drawing.Size(200, 300);
+            this.Mesa4.Name = "Mesa4";
+            this.Mesa4.Padding = new System.Windows.Forms.Padding(35);
+            this.Mesa4.Size = new System.Drawing.Size(384, 300);
+            this.Mesa4.TabIndex = 15;
+            // 
+            // Mesa5
+            // 
+            this.Mesa5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Mesa5.BackgroundImage")));
+            this.Mesa5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Mesa5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Mesa5.Location = new System.Drawing.Point(3, 748);
+            this.Mesa5.MinimumSize = new System.Drawing.Size(200, 300);
+            this.Mesa5.Name = "Mesa5";
+            this.Mesa5.Padding = new System.Windows.Forms.Padding(35);
+            this.Mesa5.Size = new System.Drawing.Size(383, 300);
+            this.Mesa5.TabIndex = 16;
+            // 
+            // Mesa6
+            // 
+            this.Mesa6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Mesa6.BackgroundImage")));
+            this.Mesa6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Mesa6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Mesa6.Location = new System.Drawing.Point(392, 748);
+            this.Mesa6.MinimumSize = new System.Drawing.Size(200, 300);
+            this.Mesa6.Name = "Mesa6";
+            this.Mesa6.Padding = new System.Windows.Forms.Padding(35);
+            this.Mesa6.Size = new System.Drawing.Size(384, 300);
+            this.Mesa6.TabIndex = 17;
+            // 
+            // mesaVarios
+            // 
+            this.mesaVarios.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mesaVarios.BackgroundImage")));
+            this.mesaVarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tableLayoutPanel5.SetColumnSpan(this.mesaVarios, 2);
+            this.mesaVarios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mesaVarios.Location = new System.Drawing.Point(3, 442);
+            this.mesaVarios.MinimumSize = new System.Drawing.Size(200, 300);
+            this.mesaVarios.Name = "mesaVarios";
+            this.mesaVarios.Padding = new System.Windows.Forms.Padding(70, 40, 70, 40);
+            this.mesaVarios.Size = new System.Drawing.Size(779, 300);
+            this.mesaVarios.TabIndex = 11;
+            // 
+            // mesaCocina
+            // 
+            this.mesaCocina.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mesaCocina.BackgroundImage")));
+            this.mesaCocina.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mesaCocina.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mesaCocina.Location = new System.Drawing.Point(3, 136);
+            this.mesaCocina.Margin = new System.Windows.Forms.Padding(3, 30, 3, 3);
+            this.mesaCocina.MinimumSize = new System.Drawing.Size(200, 300);
+            this.mesaCocina.Name = "mesaCocina";
+            this.mesaCocina.Padding = new System.Windows.Forms.Padding(35);
+            this.mesaCocina.Size = new System.Drawing.Size(386, 300);
+            this.mesaCocina.TabIndex = 2;
+            // 
+            // mesaBaño
+            // 
+            this.mesaBaño.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mesaBaño.BackgroundImage")));
+            this.mesaBaño.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mesaBaño.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mesaBaño.Location = new System.Drawing.Point(395, 136);
+            this.mesaBaño.Margin = new System.Windows.Forms.Padding(3, 30, 3, 3);
+            this.mesaBaño.MinimumSize = new System.Drawing.Size(200, 300);
+            this.mesaBaño.Name = "mesaBaño";
+            this.mesaBaño.Padding = new System.Windows.Forms.Padding(35);
+            this.mesaBaño.Size = new System.Drawing.Size(387, 300);
+            this.mesaBaño.TabIndex = 3;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(969, 654);
+            this.ClientSize = new System.Drawing.Size(930, 557);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -658,20 +659,20 @@ namespace BilliardsManager
         private PictureBox pictureBox3;
         private Label label2;
         private PictureBox pictureBox4;
-        private PanelMesaBillar Mesa1;
-        private PanelMesaBillar Mesa2;
-        private PanelMesaBillar Mesa3;
-        private PanelMesaBillar Mesa4;
-        private PanelMesaBillar Mesa5;
-        private PanelMesaBillar Mesa6;
+        private Mesa Mesa1;
+        private Mesa Mesa2;
+        private Mesa Mesa3;
+        private Mesa Mesa4;
+        private Mesa Mesa5;
+        private Mesa Mesa6;
         private TableLayoutPanel tableLayoutPanel1;
-        private PanelMesaBillar mesaBillar1;
-        private PanelMesaBillar mesaBillar2;
-        private PanelMesaBillar mesaBillar3;
-        private PanelMesaBillar mesaBillar4;
-        private PanelMesaBillar mesaBillar5;
-        private PanelMesaBillar mesaBillar6;
-        private PanelMesaBillar mesaBillar7;
+        private Mesa mesaBillar1;
+        private Mesa mesaBillar2;
+        private Mesa mesaBillar3;
+        private Mesa mesaBillar4;
+        private Mesa mesaBillar5;
+        private Mesa mesaBillar6;
+        private Mesa mesaBillar7;
         private Panel panel1;
         private TableLayoutPanel tableLayoutPanel2;
         private PictureBox pictureBox2;
@@ -679,9 +680,9 @@ namespace BilliardsManager
         private PictureBox pictureBox1;
         private TabPage tabPage3;
         private TableLayoutPanel tableLayoutPanel5;
-        private PanelMesaBillar mesaVarios;
-        private PanelMesaBillar mesaCocina;
-        private PanelMesaBillar mesaBaño;
+        private Mesa mesaVarios;
+        private Mesa mesaCocina;
+        private Mesa mesaBaño;
         private Panel panel3;
         private TableLayoutPanel tableLayoutPanel6;
         private PictureBox pictureBox5;
