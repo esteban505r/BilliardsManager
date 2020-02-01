@@ -12,10 +12,11 @@ namespace BilliardsManager
 {
     public partial class AgregarProductoDialog : Form
     {
-        public Producto producto { get; set; }
+        public List<Producto> productos { get; set; }
         public AgregarProductoDialog()
         {
             InitializeComponent();
+            productos = new List<Producto>();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -27,21 +28,21 @@ namespace BilliardsManager
         {
             ProductosForm productosForm = new ProductosForm("bebida");
             productosForm.ShowDialog();
-            producto = productosForm.productSelected;
+            productos.AddRange(productosForm.productos);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             ProductosForm productosForm = new ProductosForm("comida");
             productosForm.ShowDialog();
-            producto = productosForm.productSelected;
+            productos.AddRange(productosForm.productos);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             ProductosForm productosForm = new ProductosForm("otro");
             productosForm.ShowDialog();
-            producto = productosForm.productSelected;
+            productos.AddRange(productosForm.productos);
         }
     }
 }

@@ -42,11 +42,12 @@ namespace BilliardsManager
             sqlite_datareader = sqlite_cmd.ExecuteReader();
             while (sqlite_datareader.Read()) 
             {
+                int id = sqlite_datareader.GetInt32(0);
                 string nombre = sqlite_datareader.GetString(1);
                 int precio = sqlite_datareader.GetInt32(2);
                 string tipo = sqlite_datareader.GetString(3);
 
-                Producto p = new Producto(nombre, precio, tipo);
+                Producto p = new Producto(id,nombre, precio, tipo);
                 productos.Add(p);
             }
             sqlite_conn.Close();

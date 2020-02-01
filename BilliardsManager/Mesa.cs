@@ -8,15 +8,16 @@ using System.Collections.Generic;
 
 namespace BilliardsManager
 {
-    public class Mesa : Panel 
+    public class Mesa : Panel
     {
-        private Label numero,cronometro;
+        private Label numero, cronometro;
         private Boolean active = false;
         private Boolean isActiveStopWatch = false;
+        public Boolean exit { get; set; } = false;
         public List<Producto> productos { get; set; }
+        private int tipo;
 
-
-        public Mesa():base()
+        public Mesa(int tipo):base()
         {
             this.BackgroundImage = global::BilliardsManager.Properties.Resources.table;
             this.BackgroundImageLayout = ImageLayout.Zoom;
@@ -24,7 +25,8 @@ namespace BilliardsManager
             this.MinimumSize = new Size(200,300);
             this.Padding = new Padding(35);
 
-            productos = new List<Producto>();
+            this.tipo = tipo;
+            this.productos = new List<Producto>();
             cronometro = new Label();
             cronometro.ForeColor = Color.White;
             cronometro.Text = "00:00:00";
@@ -54,7 +56,10 @@ namespace BilliardsManager
             {
                 active = true;
                 numero.TextAlign = ContentAlignment.TopLeft;
-
+                if (tipo == 1)
+                {
+                    this.BackgroundImage = global::BilliardsManager.Properties.Resources.table_clicked;
+                }
                 Controls.Add(cronometro);
 
                 Thread c = new Thread(new ThreadStart(stopWatch));
@@ -66,8 +71,31 @@ namespace BilliardsManager
                 OpcionesDialog opciones = new OpcionesDialog();
                 opciones.mesa = this;
                 opciones.ShowDialog();
-                if (opciones.producto != null) { 
-                productos.Add(opciones.producto);
+                if (opciones.productos!=null && opciones.productos.Count != 0) {
+                    if (productos == null) { productos = new List<Producto>(); };
+                productos.AddRange(opciones.productos);
+                opciones.productos = new List<Producto>();
+                }
+                if(opciones.mesa.exit == true)
+                {
+                    numero.TextAlign = ContentAlignment.MiddleCenter;
+                    if (tipo == 1)
+                    {
+                        this.BackgroundImage = global::BilliardsManager.Properties.Resources.table;
+                    }
+                    else if(tipo==2)
+                    {
+                        this.BackgroundImage = global::BilliardsManager.Properties.Resources.table2;
+                    }
+                    else if (tipo == 3)
+                    {
+                        this.BackgroundImage = global::BilliardsManager.Properties.Resources.kitchen;
+                    }
+                    Controls.Remove(cronometro);
+                    isActiveStopWatch = false;
+                    productos = new List<Producto>();
+                    active = false;
+                    exit = false;
                 }
             }
         }

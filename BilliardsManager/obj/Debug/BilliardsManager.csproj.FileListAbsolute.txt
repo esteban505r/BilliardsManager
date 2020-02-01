@@ -36,3 +36,8 @@ C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\b
 C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.ProductosForm.resources
 C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.csproj.CopyComplete
 C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.VerProductosForm.resources
+C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\bin\Debug\BilliardsManager.exe.manifest
+C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\bin\Debug\BilliardsManager.application
+C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.TrustInfo.xml
+C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.exe.manifest
+C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.application

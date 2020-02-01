@@ -1,22 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BilliardsManager
 {
     public partial class OpcionesDialog : Form
     {
-        public Producto producto { get; set; }
+        public List<Producto> productos { get; set; }
         public Mesa mesa { get; set; }
         public OpcionesDialog()
         {
             InitializeComponent();
+            productos = new List<Producto>();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -24,8 +19,8 @@ namespace BilliardsManager
             Dispose();
             AgregarProductoDialog dialog = new AgregarProductoDialog();
             dialog.ShowDialog();
-            this.producto = dialog.producto;
-            
+            this.productos.AddRange(dialog.productos);
+            dialog.productos = new List<Producto>();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -37,6 +32,12 @@ namespace BilliardsManager
         {
             VerProductosForm ver = new VerProductosForm(mesa.productos);
             ver.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            mesa.exit = true;
+            Dispose();
         }
     }
 }
