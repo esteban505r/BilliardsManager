@@ -23,6 +23,10 @@ namespace BilliardsManager
             sqlite_cmd = sqlite_conn.CreateCommand();
             sqlite_cmd.CommandText = "CREATE TABLE IF NOT EXISTS productos (id integer primary key autoincrement, name varchar(20),precio integer, type varchar(20));";
             sqlite_cmd.ExecuteNonQuery();
+            sqlite_cmd.CommandText = "CREATE TABLE IF NOT EXISTS admins (id integer primary key autoincrement, user varchar(20), password varchar(20));";
+            sqlite_cmd.ExecuteNonQuery();
+            sqlite_cmd.CommandText = "CREATE TABLE IF NOT EXISTS confs (id integer primary key autoincrement, name varchar(20), value varchar(20),requireAdmin boolean);";
+            sqlite_cmd.ExecuteNonQuery();
             sqlite_conn.Close();
         }
 
@@ -53,5 +57,46 @@ namespace BilliardsManager
             sqlite_conn.Close();
             return productos;
         }
+
+        public List<Admin> getAdmins()
+        {
+            sqlite_conn.Open();
+            List<Admin> admins = new List<Admin>();
+            sqlite_cmd.CommandText = "SELECT * FROM admins";
+            sqlite_datareader = sqlite_cmd.ExecuteReader();
+            while (sqlite_datareader.Read())
+            {
+                int id = sqlite_datareader.GetInt32(0);
+                string user = sqlite_datareader.GetString(1);
+                string password = sqlite_datareader.GetString(2);
+
+                Admin a = new Admin(id, user, password);
+                admins.Add(a);
+            }
+            sqlite_conn.Close();
+            return admins;
+        } 
+        
+        public List<Conf> getConfs()
+        {
+            sqlite_conn.Open();
+            List<Conf> confs = new List<Conf>();
+            sqlite_cmd.CommandText = "SELECT * FROM confs";
+            sqlite_datareader = sqlite_cmd.ExecuteReader();
+            while (sqlite_datareader.Read())
+            {
+                int id = sqlite_datareader.GetInt32(0);
+                string name = sqlite_datareader.GetString(1);
+                string value = sqlite_datareader.GetString(2);
+                Boolean requireAdmin = sqlite_datareader.GetBoolean(3);
+
+                Conf a = new Conf(id, name, value,requireAdmin);
+                confs.Add(a);
+            }
+            sqlite_conn.Close();
+            return confs;
+        }
+
+
     }
 }
