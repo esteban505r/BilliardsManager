@@ -1,0 +1,42 @@
+[33mcommit 1fc259529d6d19e06c1dcc760c7915286206c38a[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Esteban <personal@estebannlopez.com>
+Date:   Sat Feb 1 02:26:11 2020 -0500
+
+    A lot of improvements
+
+[33mcommit b3b25bd59ea66f132fa3979046fdfcda753fe425[m
+Author: Esteban <personal@estebannlopez.com>
+Date:   Fri Jan 31 02:12:35 2020 -0500
+
+    Database Added
+
+[33mcommit 0957ed79aa8866ef4b818095d0c35f547a3ffb43[m
+Author: Esteban <personal@estebannlopez.com>
+Date:   Thu Jan 30 19:15:15 2020 -0500
+
+    Design improved
+
+[33mcommit e6877c1986f1728b0ff8d0ed8c128553fe985de0[m
+Author: Esteban <personal@estebannlopez.com>
+Date:   Thu Jan 30 02:21:29 2020 -0500
+
+    Added Tabs
+
+[33mcommit a265d085edf850a20ca3c6c0f298a76fab844a92[m
+Merge: 4910941 e45717e
+Author: Esteban Lopez <esteban505r@gmail.com>
+Date:   Wed Jan 29 01:29:38 2020 -0500
+
+    Merge branch 'master' of https://github.com/esteban505r/BilliardsManager
+
+[33mcommit 49109416e32850b2650bdfc6e8e2c9fb6267d0d4[m
+Author: Esteban Lopez <esteban505r@gmail.com>
+Date:   Wed Jan 29 01:23:24 2020 -0500
+
+    First Commit
+
+[33mcommit e45717eb5c7fadcf903f8a53c917ac2ee1daaedf[m
+Author: esteban505r <35972981+esteban505r@users.noreply.github.com>
+Date:   Wed Jan 29 01:00:13 2020 -0500
+
+    Initial commit

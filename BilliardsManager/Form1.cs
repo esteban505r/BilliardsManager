@@ -12,10 +12,27 @@ namespace BilliardsManager
 {
     public partial class Form1 : Form
     {
+        public static int valorHora = 7000;
+        public static int valorMinuto = valorHora/60;
         public Form1()
         {
             Conector c = new Conector();
-
+            this.mesaBillar1 = new BilliardsManager.Mesa(1);
+            this.mesaBillar2 = new BilliardsManager.Mesa(1);
+            this.mesaBillar3 = new BilliardsManager.Mesa(1);
+            this.mesaBillar4 = new BilliardsManager.Mesa(1);
+            this.mesaBillar5 = new BilliardsManager.Mesa(1);
+            this.mesaBillar6 = new BilliardsManager.Mesa(1);
+            this.mesaBillar7 = new BilliardsManager.Mesa(1);
+            this.Mesa1 = new BilliardsManager.Mesa(2);
+            this.Mesa2 = new BilliardsManager.Mesa(2);
+            this.Mesa3 = new BilliardsManager.Mesa(2);
+            this.Mesa4 = new BilliardsManager.Mesa(2);
+            this.Mesa5 = new BilliardsManager.Mesa(2);
+            this.Mesa6 = new BilliardsManager.Mesa(2);
+            this.mesaVarios = new BilliardsManager.Mesa(3);
+            this.mesaCocina = new BilliardsManager.Mesa(3);
+            this.mesaBaño = new BilliardsManager.Mesa(3);
             InitializeComponent();
 
             label1.ForeColor = ColorTranslator.FromHtml("#24915e");

@@ -47,8 +47,7 @@ namespace BilliardsManager
                         label.Font = new Font("Microsoft Sans Serif", 20.25F);
 
                         this.tableLayoutPanel1.RowCount++;
-                        int rowCount = this.tableLayoutPanel1.RowCount;
-                        this.tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, ((float)rowCount)/100));
+                        this.tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent,10F));
                         this.tableLayoutPanel1.Controls.Add(label, 1, i);
                     }
                 }

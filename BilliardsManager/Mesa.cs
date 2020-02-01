@@ -14,19 +14,20 @@ namespace BilliardsManager
         private Boolean active = false;
         private Boolean isActiveStopWatch = false;
         public Boolean exit { get; set; } = false;
-        public List<Producto> productos { get; set; }
+        public Stopwatch stopwatch { get; set; }
+        public List<Producto> productos { get ; set ; }
         private int tipo;
 
         public Mesa(int tipo):base()
         {
+            this.tipo = tipo;
+            this.productos = new List<Producto>();
             this.BackgroundImage = global::BilliardsManager.Properties.Resources.table;
             this.BackgroundImageLayout = ImageLayout.Zoom;
             this.Dock = DockStyle.Fill;
             this.MinimumSize = new Size(200,300);
             this.Padding = new Padding(35);
 
-            this.tipo = tipo;
-            this.productos = new List<Producto>();
             cronometro = new Label();
             cronometro.ForeColor = Color.White;
             cronometro.Text = "00:00:00";
@@ -68,12 +69,13 @@ namespace BilliardsManager
             }
             else
             {
-                OpcionesDialog opciones = new OpcionesDialog();
-                opciones.mesa = this;
+                OpcionesDialog opciones = new OpcionesDialog(this);
                 opciones.ShowDialog();
                 if (opciones.productos!=null && opciones.productos.Count != 0) {
-                    if (productos == null) { productos = new List<Producto>(); };
-                productos.AddRange(opciones.productos);
+
+                if (productos == null) { productos = new List<Producto>(); };    
+
+                productos.AddRange(opciones.productos);                
                 opciones.productos = new List<Producto>();
                 }
                 if(opciones.mesa.exit == true)
@@ -118,7 +120,7 @@ namespace BilliardsManager
         public void stopWatch()
         {
             isActiveStopWatch = true;
-            Stopwatch stopwatch = new Stopwatch();
+            stopwatch = new Stopwatch();
             stopwatch.Start();
 
             while (isActiveStopWatch)
