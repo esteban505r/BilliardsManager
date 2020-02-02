@@ -22,8 +22,19 @@ namespace BilliardsManager
         {
             this.tipo = tipo;
             this.productos = new List<Producto>();
-            this.BackgroundImage = global::BilliardsManager.Properties.Resources.table;
-            this.BackgroundImageLayout = ImageLayout.Zoom;
+            if (tipo == 1)
+            {
+                this.BackgroundImage = global::BilliardsManager.Properties.Resources.table;
+            }
+            else if (tipo == 2)
+            {
+                this.BackgroundImage = global::BilliardsManager.Properties.Resources.table2;
+            }
+            else if (tipo == 3)
+            {
+                this.BackgroundImage = global::BilliardsManager.Properties.Resources.kitchen;
+            }
+            this.BackgroundImageLayout = ImageLayout.Stretch;
             this.Dock = DockStyle.Fill;
             this.MinimumSize = new Size(200,300);
             this.Padding = new Padding(35);

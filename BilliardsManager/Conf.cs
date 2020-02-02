@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace BilliardsManager
 {
     [Serializable]
-    class Conf
+    public class Conf
     {
         public int id { get; set; }
         public String name { get; set; }

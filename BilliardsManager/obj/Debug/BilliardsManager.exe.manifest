@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BilliardsManager.exe" size="1736704">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BilliardsManager.exe" size="1011200">
       <assemblyIdentity name="BilliardsManager" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Iu+Frg3lDfQMcsua4XFqpI3yISTAyEnyuYW7O8Lhm6Q=</dsig:DigestValue>
+        <dsig:DigestValue>zPiJqgHeIC3tarvKcbRYDW/+vKosiTzfPSJAJeAjY3Y=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

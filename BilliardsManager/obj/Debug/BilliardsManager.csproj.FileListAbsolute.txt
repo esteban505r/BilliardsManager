@@ -14,7 +14,6 @@ C:\Users\hruan\OneDrive\Escritorio\BilliardsManager\BilliardsManager\obj\Debug\B
 C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\bin\Debug\BilliardsManager.exe.config
 C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\bin\Debug\BilliardsManager.exe
 C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\bin\Debug\BilliardsManager.pdb
-C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.csprojAssemblyReference.cache
 C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.Form1.resources
 C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.Properties.Resources.resources
 C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.csproj.GenerateResource.cache
@@ -41,3 +40,9 @@ C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\b
 C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.TrustInfo.xml
 C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.exe.manifest
 C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.application
+C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.SettingsForm.resources
+C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.AdministrarProductosForm.resources
+C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.csprojAssemblyReference.cache
+C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.AdminWelcome.resources
+C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.CambiarContraseñaForm.resources
+C:\Users\Estebanano\Desktop\BilliardsManager\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.AcercaDeForm.resources
