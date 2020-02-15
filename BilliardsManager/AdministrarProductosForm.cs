@@ -16,19 +16,6 @@ namespace BilliardsManager
             lista = c.getProductos();
             for (int i = 0; i < lista.Count(); i++)
             {
-                int s = 0;
-                switch (lista[i].getType())
-                {
-                    case "bebida":
-                        s = 0;
-                        break;
-                    case "comida":
-                        s = 1;
-                        break;
-                    case "otro":
-                        s = 2;
-                        break;
-                }
                 dataGridView1.Rows.Add(lista[i].getID(), lista[i].getName(), lista[i].getPrecio(), lista[i].getType(), "Eliminar");
                 dataGridView1.Rows[i].Cells["tipo"].Value = lista[i].getType();
             }

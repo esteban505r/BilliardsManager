@@ -38,5 +38,11 @@ namespace BilliardsManager
             CambiarContraseñaForm cambiarContraseña = new CambiarContraseñaForm(new Conector());
             cambiarContraseña.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            UtilidadForm utilidadForm = new UtilidadForm(0);
+            utilidadForm.ShowDialog();
+        }
     }
 }

@@ -32,27 +32,55 @@ namespace BilliardsManager
             Dispose();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void actualizarProductos()
         {
             if (mesa.productos == null) { mesa.productos = new List<Producto>(); }
-            Producto tiempo = new Producto(0, "Tiempo", (Form1.valorHora*(Convert.ToInt32(stopwatch.Elapsed.TotalHours)))
+            Producto tiempo = new Producto(0, "Tiempo", (Form1.valorHora * (Convert.ToInt32(stopwatch.Elapsed.TotalHours)))
                 + (Form1.valorMinuto * (Convert.ToInt32(stopwatch.Elapsed.TotalMinutes))), "tiempo");
             for (int i = 0; i < mesa.productos.Count; i++)
             {
-                if (mesa.productos[i].getType().Equals("tiempo")){
+                if (mesa.productos[i].getType().Equals("tiempo"))
+                {
                     mesa.productos.RemoveAt(i);
                 }
             }
 
             mesa.productos.Add(tiempo);
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            actualizarProductos();
             VerProductosForm ver = new VerProductosForm(mesa.productos);
             ver.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            mesa.exit = true;
-            Dispose();
+            int total = 0;
+            for (int i = 0; i < mesa.productos.Count; i++)
+            {
+                total = total + mesa.productos[i].getPrecio();
+            }
+            if (total > 100) { 
+                DateTime now = DateTime.Now;
+                Conector c = new Conector();
+                List<Record> records = new List<Record>();
+                for (int i = 0; i < mesa.productos.Count; i++)
+                {
+                    if (mesa.productos[i].getPrecio() != 0)
+                    {
+                        records.Add(new Record(0, now.ToString("dd/MM/yyyy HH:mm"), mesa.productos[i].getType(), mesa.productos[i].getPrecio(), 0));
+                    }
+                }
+                c.saveRecords(records);
+                mesa.exit = true;
+                Dispose();
+            }
+            else
+            {
+                mesa.exit = true;
+                Dispose();
+            }
         }
     }
 }

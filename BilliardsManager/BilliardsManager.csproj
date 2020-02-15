@@ -134,11 +134,24 @@
     <Compile Include="AdminWelcome.Designer.cs">
       <DependentUpon>AdminWelcome.cs</DependentUpon>
     </Compile>
+    <Compile Include="Record.cs" />
+    <Compile Include="UtilidadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilidadForm.Designer.cs">
+      <DependentUpon>UtilidadForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SettingsForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SettingsForm.Designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilidadPorTipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilidadPorTipos.Designer.cs">
+      <DependentUpon>UtilidadPorTipos.cs</DependentUpon>
     </Compile>
     <Compile Include="VerProductosForm.cs">
       <SubType>Form</SubType>
@@ -199,6 +212,9 @@
       <DependentUpon>Form1.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="UtilidadForm.resx">
+      <DependentUpon>UtilidadForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OpcionesDialog.resx">
       <DependentUpon>OpcionesDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -212,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UtilidadPorTipos.resx">
+      <DependentUpon>UtilidadPorTipos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VerProductosForm.resx">
       <DependentUpon>VerProductosForm.cs</DependentUpon>

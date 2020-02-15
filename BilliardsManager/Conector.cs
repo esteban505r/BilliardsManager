@@ -27,6 +27,8 @@ namespace BilliardsManager
             sqlite_cmd.ExecuteNonQuery();
             sqlite_cmd.CommandText = "CREATE TABLE IF NOT EXISTS confs (id integer primary key autoincrement, name varchar(20), value varchar(20));";
             sqlite_cmd.ExecuteNonQuery();
+            sqlite_cmd.CommandText = "CREATE TABLE IF NOT EXISTS records (id integer primary key autoincrement, date text(25), type varchar(20), entry integer, expense integer);";
+            sqlite_cmd.ExecuteNonQuery();
             sqlite_conn.Close();
         }
 
@@ -97,6 +99,19 @@ namespace BilliardsManager
             sqlite_conn.Close();
         }
 
+        public void insertRecord(Record record)
+        {
+            sqlite_conn.Open();
+            sqlite_cmd.CommandText = sqlite_cmd.CommandText = "INSERT INTO records (date,type,entry,expense) VALUES(@date,@type,@entry,@expense);";
+            sqlite_cmd.Parameters.AddWithValue("@date", record.date);
+            sqlite_cmd.Parameters.AddWithValue("@type", record.type);
+            sqlite_cmd.Parameters.AddWithValue("@entry", record.entry);
+            sqlite_cmd.Parameters.AddWithValue("@expense", record.expense);
+            sqlite_cmd.ExecuteNonQuery();
+            sqlite_conn.Close();
+        }
+
+
         public List<Producto> getProductos() 
         {
             sqlite_conn.Open();
@@ -117,6 +132,28 @@ namespace BilliardsManager
             sqlite_conn.Close();   
             return productos;
         }
+        
+        public List<Record> getRecords() 
+        {
+            sqlite_conn.Open();
+            List<Record> records = new List<Record>();
+            sqlite_cmd.CommandText = "SELECT * FROM records";
+            sqlite_datareader = sqlite_cmd.ExecuteReader();
+            while (sqlite_datareader.Read()) 
+            {
+                int id = sqlite_datareader.GetInt32(0);
+                string date = sqlite_datareader.GetString(1);
+                string type = sqlite_datareader.GetString(2);
+                int entry = sqlite_datareader.GetInt32(3);
+                int expense = sqlite_datareader.GetInt32(4);
+
+                Record p = new Record(id,date,type,entry,expense);
+                records.Add(p);
+            }
+            sqlite_datareader.Close();
+            sqlite_conn.Close();   
+            return records;
+        }
 
         public void saveProductos(List<Producto> productos)
         {
@@ -132,6 +169,41 @@ namespace BilliardsManager
             sqlite_conn.Close();
         }
 
+        public void saveRecords(List<Record> records)
+        {
+            sqlite_conn.Open();
+            for (int i = 0; i < records.Count; i++)
+            {
+                sqlite_cmd.CommandText = "INSERT INTO records (date,type,entry,expense) VALUES(@date,@type,@entry,@expense);";
+                sqlite_cmd.Parameters.AddWithValue("@date", records[i].date);
+                sqlite_cmd.Parameters.AddWithValue("@type", records[i].type);
+                sqlite_cmd.Parameters.AddWithValue("@entry", records[i].entry);
+                sqlite_cmd.Parameters.AddWithValue("@expense", records[i].expense);
+               
+                sqlite_cmd.ExecuteNonQuery();
+            }
+            sqlite_conn.Close();
+        }
+        public void saveRecords(List<Record> records,Boolean replace)
+        {
+            sqlite_conn.Open();
+            if (replace == true)
+            {
+                sqlite_cmd.CommandText = "DELETE FROM records";
+                sqlite_cmd.ExecuteNonQuery();
+            }
+            for (int i = 0; i < records.Count; i++)
+            {
+                sqlite_cmd.CommandText = "INSERT INTO records (date,type,entry,expense) VALUES(@date,@type,@entry,@expense);";
+                sqlite_cmd.Parameters.AddWithValue("@date", records[i].date);
+                sqlite_cmd.Parameters.AddWithValue("@type", records[i].type);
+                sqlite_cmd.Parameters.AddWithValue("@entry", records[i].entry);
+                sqlite_cmd.Parameters.AddWithValue("@expense", records[i].expense);
+
+                sqlite_cmd.ExecuteNonQuery();
+            }
+            sqlite_conn.Close();
+        }
 
         public void saveProductos(List<Producto> productos,Boolean replace)
         {
