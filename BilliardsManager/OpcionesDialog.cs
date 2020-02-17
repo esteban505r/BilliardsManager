@@ -35,17 +35,20 @@ namespace BilliardsManager
         private void actualizarProductos()
         {
             if (mesa.productos == null) { mesa.productos = new List<Producto>(); }
-            Producto tiempo = new Producto(0, "Tiempo", (Form1.valorHora * (Convert.ToInt32(stopwatch.Elapsed.TotalHours)))
-                + (Form1.valorMinuto * (Convert.ToInt32(stopwatch.Elapsed.TotalMinutes))), "tiempo");
-            for (int i = 0; i < mesa.productos.Count; i++)
+            if (stopwatch != null)
             {
-                if (mesa.productos[i].getType().Equals("tiempo"))
-                {
-                    mesa.productos.RemoveAt(i);
-                }
-            }
+                Producto tiempo = new Producto(0, "Tiempo", (Form1.valorHora * (Convert.ToInt32(stopwatch.Elapsed.TotalHours)))
+                    + (Form1.valorMinuto * (Convert.ToInt32(stopwatch.Elapsed.TotalMinutes))), "tiempo");
 
-            mesa.productos.Add(tiempo);
+                for (int i = 0; i < mesa.productos.Count; i++)
+                {
+                    if (mesa.productos[i].getType().Equals("tiempo"))
+                    {
+                        mesa.productos.RemoveAt(i);
+                    }
+                }
+                mesa.productos.Add(tiempo);
+            }
         }
         private void button2_Click(object sender, EventArgs e)
         {

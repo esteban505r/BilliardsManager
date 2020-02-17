@@ -113,6 +113,16 @@ namespace BilliardsManager.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icono {
+            get {
+                object obj = ResourceManager.GetObject("icono", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap izquierda {
             get {
                 object obj = ResourceManager.GetObject("izquierda", resourceCulture);
@@ -176,6 +186,16 @@ namespace BilliardsManager.Properties {
         internal static System.Drawing.Bitmap table2 {
             get {
                 object obj = ResourceManager.GetObject("table2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap table2_clicked {
+            get {
+                object obj = ResourceManager.GetObject("table2_clicked", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

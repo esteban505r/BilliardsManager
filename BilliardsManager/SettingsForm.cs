@@ -41,8 +41,12 @@ namespace BilliardsManager
 
         private void button2_Click(object sender, EventArgs e)
         {
-            UtilidadForm utilidadForm = new UtilidadForm(0);
-            utilidadForm.ShowDialog();
+            PedirContraseñaForm pedirContraseñaForm = new PedirContraseñaForm();
+            pedirContraseñaForm.ShowDialog();
+            if (pedirContraseñaForm.passed) { 
+                UtilidadForm utilidadForm = new UtilidadForm(0);
+                utilidadForm.ShowDialog();
+            }
         }
     }
 }

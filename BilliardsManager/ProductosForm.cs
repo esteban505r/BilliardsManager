@@ -34,9 +34,8 @@ namespace BilliardsManager
                 ProductoButton boton = new ProductoButton(productosAMostrar[i]);
                 boton.Text = productosAMostrar[i].getName() + " $"+productosAMostrar[i].getPrecio().ToString();
                 boton.Font = new Font("Microsoft Sans Serif", 20.25F);
-                boton.Dock = DockStyle.Fill;
-
-                this.tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent,((float)productosAMostrar.Count)/100));
+                boton.Dock = DockStyle.Top;
+                boton.MinimumSize = new Size(200, 150);
                 this.tableLayoutPanel1.Controls.Add(boton, 1,i);
                 
                 boton.Click += new EventHandler(delegate (Object o, EventArgs a) {

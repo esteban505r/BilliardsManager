@@ -39,46 +39,48 @@ namespace BilliardsManager
         }
 
         private void button1_Click(object sender, EventArgs e)
+        { 
+            guardar();
+            Dispose();
+        }
+
+        private void guardar()
         {
+            List<Record> records = new List<Record>();
+            foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-                List<Record> records = new List<Record>();
-                foreach (DataGridViewRow row in dataGridView1.Rows)
+                if (!string.IsNullOrEmpty(row.Cells[3].Value.ToString()))
                 {
-                    if (!string.IsNullOrEmpty(row.Cells[3].Value.ToString()))
+                    try
                     {
-                        try
+                        if (Convert.ToInt32(row.Cells[3].Value) >= 0)
                         {
-                            if (Convert.ToInt32(row.Cells[3].Value) >= 0)
-                            {
-                                String date = row.Cells[0].Value.ToString();
-                                String type = row.Cells[1].Value.ToString();
-                                int entry = Convert.ToInt32(row.Cells[2].Value.ToString());
-                                int expense = Convert.ToInt32(row.Cells[3].Value.ToString());
-                                Record p = new Record(0, date, type, entry,expense);
-                                records.Add(p);
-                            }
-                            else
-                            {
-                                MessageBox.Show("Error, el precio debe ser un número entero positivo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
+                            String date = row.Cells[0].Value.ToString();
+                            String type = row.Cells[1].Value.ToString();
+                            int entry = Convert.ToInt32(row.Cells[2].Value.ToString());
+                            int expense = Convert.ToInt32(row.Cells[3].Value.ToString());
+                            Record p = new Record(0, date, type, entry, expense);
+                            records.Add(p);
                         }
-                        catch (FormatException error2)
+                        else
                         {
                             MessageBox.Show("Error, el precio debe ser un número entero positivo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
-                    else
+                    catch (FormatException error2)
                     {
-                        MessageBox.Show("Error, ninguna celda debe estar vacía", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Error, el precio debe ser un número entero positivo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-
-                    
                 }
-                c.saveRecords(records, true);
-                Dispose();
-            }
-        }
+                else
+                {
+                    MessageBox.Show("Error, ninguna celda debe estar vacía", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
+
+            }
+            c.saveRecords(records, true);
+        }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("¿Está seguro?", "Eliminar registro", MessageBoxButtons.YesNo);
@@ -104,6 +106,11 @@ namespace BilliardsManager
         {
             UtilidadPorTipos utilidadPorTipos = new UtilidadPorTipos();
             utilidadPorTipos.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            guardar();
         }
     }
 }

@@ -29,6 +29,7 @@ namespace BilliardsManager
             else if (tipo == 2)
             {
                 this.BackgroundImage = global::BilliardsManager.Properties.Resources.table2;
+                
             }
             else if (tipo == 3)
             {
@@ -71,12 +72,17 @@ namespace BilliardsManager
                 if (tipo == 1)
                 {
                     this.BackgroundImage = global::BilliardsManager.Properties.Resources.table_clicked;
-                }
-                Controls.Add(cronometro);
+                    Controls.Add(cronometro);
 
-                Thread c = new Thread(new ThreadStart(stopWatch));
-                c.IsBackground = true;
-                c.Start();
+                    Thread c = new Thread(new ThreadStart(stopWatch));
+                    c.IsBackground = true;
+                    c.Start();
+                }
+                else if (tipo == 2)
+                {
+                    this.BackgroundImage = global::BilliardsManager.Properties.Resources.table2_clicked;
+
+                }
             }
             else
             {
@@ -95,6 +101,8 @@ namespace BilliardsManager
                     if (tipo == 1)
                     {
                         this.BackgroundImage = global::BilliardsManager.Properties.Resources.table;
+                        Controls.Remove(cronometro);
+                        isActiveStopWatch = false;
                     }
                     else if(tipo==2)
                     {
@@ -104,8 +112,6 @@ namespace BilliardsManager
                     {
                         this.BackgroundImage = global::BilliardsManager.Properties.Resources.kitchen;
                     }
-                    Controls.Remove(cronometro);
-                    isActiveStopWatch = false;
                     productos = new List<Producto>();
                     active = false;
                     exit = false;

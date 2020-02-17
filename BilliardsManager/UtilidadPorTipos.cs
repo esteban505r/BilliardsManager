@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BilliardsManager
@@ -47,7 +41,7 @@ namespace BilliardsManager
             }
             int utilidad = totalIngresos - totalGastos;
             MessageBox.Show("Total Ingresos: "+totalIngresos.ToString()+"\n"+"Total Gastos"+totalGastos.ToString()+"\n"+
-                "Utilidad "+utilidad.ToString(),"Utilidad",MessageBoxButtons.OK);
+                "Utilidad "+utilidad.ToString(),"Utilidad ",MessageBoxButtons.OK);
         }
 
         private void button3_Click(object sender, EventArgs e)

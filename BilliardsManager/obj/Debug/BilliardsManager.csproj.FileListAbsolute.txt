@@ -83,3 +83,4 @@ C:\Users\Esteban\Desktop\BilliardsManager\BilliardsManager\obj\Debug\BilliardsMa
 C:\Users\Esteban\Desktop\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.pdb
 C:\Users\Esteban\Desktop\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.UtilidadForm.resources
 C:\Users\Esteban\Desktop\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.UtilidadPorTipos.resources
+C:\Users\Esteban\Desktop\BilliardsManager\BilliardsManager\obj\Debug\BilliardsManager.PedirContraseñaForm.resources

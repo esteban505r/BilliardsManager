@@ -88,6 +88,28 @@ namespace BilliardsManager
          
         }
 
+        public Boolean checkAdminPassword(String user, String password)
+        {
+            sqlite_conn.Open();
+            sqlite_cmd.CommandText = "SELECT * FROM admins WHERE user=@user AND password=@password";
+            sqlite_cmd.Parameters.AddWithValue("@user", user);
+            sqlite_cmd.Parameters.AddWithValue("@password", password);
+            sqlite_datareader = sqlite_cmd.ExecuteReader();
+            if (sqlite_datareader.HasRows)
+            {
+                sqlite_datareader.Close();
+                sqlite_conn.Close();
+                return true;
+            }
+            else
+            {
+                sqlite_datareader.Close();
+                sqlite_conn.Close();
+                return false;
+            }
+
+        }
+
         public void insertProducto(Producto producto)
         {
             sqlite_conn.Open();

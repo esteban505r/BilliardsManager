@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdministrarProductosForm));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipo = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,10 +83,6 @@
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            // 
             // id
             // 
             this.id.HeaderText = "ID";
@@ -117,6 +114,10 @@
             this.eliminar.Name = "eliminar";
             this.eliminar.Text = "Eliminar";
             // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            // 
             // AdministrarProductosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -125,6 +126,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdministrarProductosForm";
             this.Text = "AdministrarProductosForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -42,12 +42,11 @@ namespace BilliardsManager
                         agregados.Add(productos[i].getID());
                         Label label = new Label();
                         label.Text = cantidad + " x " + productos[i].getName() + "  " + "$" + productos[i].getPrecio().ToString();
-                        label.Dock = DockStyle.Fill;
                         label.TextAlign = ContentAlignment.MiddleCenter;
+                        label.Dock = DockStyle.Top;
+                        label.MinimumSize = new Size(200, 150);
                         label.Font = new Font("Microsoft Sans Serif", 20.25F);
 
-                        this.tableLayoutPanel1.RowCount++;
-                        this.tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent,10F));
                         this.tableLayoutPanel1.Controls.Add(label, 1, i);
                     }
                 }
