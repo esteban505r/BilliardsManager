@@ -48,6 +48,22 @@ namespace BilliardsManager
                 sqlite_cmd.Parameters.AddWithValue("@user", "admin");
                 sqlite_cmd.Parameters.AddWithValue("@password", "admin");
                 sqlite_cmd.ExecuteNonQuery();
+                sqlite_cmd.CommandText = "INSERT INTO confs (name,value) VALUES (@name,@value)";
+                sqlite_cmd.Parameters.AddWithValue("@name", "hour_value");
+                sqlite_cmd.Parameters.AddWithValue("@value", "7000");
+                sqlite_cmd.ExecuteNonQuery();
+                sqlite_cmd.CommandText = "INSERT INTO confs (name,value) VALUES (@name,@value)";
+                sqlite_cmd.Parameters.AddWithValue("@name", "minute_value");
+                sqlite_cmd.Parameters.AddWithValue("@value", "437");
+                sqlite_cmd.ExecuteNonQuery();
+                sqlite_cmd.CommandText = "INSERT INTO confs (name,value) VALUES (@name,@value)";
+                sqlite_cmd.Parameters.AddWithValue("@name", "is_minute_value_hour_divided");
+                sqlite_cmd.Parameters.AddWithValue("@value", "true");
+                sqlite_cmd.ExecuteNonQuery(); 
+                sqlite_cmd.CommandText = "INSERT INTO confs (name,value) VALUES (@name,@value)";
+                sqlite_cmd.Parameters.AddWithValue("@name", "manage_products_require_admin");
+                sqlite_cmd.Parameters.AddWithValue("@value", "false");
+                sqlite_cmd.ExecuteNonQuery();
                 sqlite_conn.Close();
                 return true;
             }
@@ -88,6 +104,53 @@ namespace BilliardsManager
          
         }
 
+        public Conf getConf(String confName)
+        {
+            sqlite_conn.Open();
+            sqlite_cmd.CommandText = "SELECT * FROM confs where name = @name";
+            sqlite_cmd.Parameters.AddWithValue("@name", confName);
+            sqlite_datareader = sqlite_cmd.ExecuteReader();
+            if (sqlite_datareader.Read())
+            {
+                int id = sqlite_datareader.GetInt32(0);
+                string name = sqlite_datareader.GetString(1);
+                string value = sqlite_datareader.GetString(2);
+                Conf a = new Conf(id, name, value, false);
+                sqlite_datareader.Close();
+                sqlite_conn.Close();
+                return a;
+            }
+            else
+            {
+                sqlite_datareader.Close();
+                sqlite_conn.Close();
+                return null;
+            }
+        }
+        public void saveConf(Conf conf)
+        {
+            sqlite_conn.Open();
+            sqlite_cmd.CommandText = "SELECT * FROM confs WHERE name=@name";
+            sqlite_cmd.Parameters.AddWithValue("@name", conf.name);
+            sqlite_datareader = sqlite_cmd.ExecuteReader();
+            if (sqlite_datareader.HasRows)
+            {
+                sqlite_datareader.Close();
+                sqlite_cmd.CommandText = "UPDATE confs SET value = @value WHERE name=@name";
+                sqlite_cmd.Parameters.AddWithValue("@name", conf.name);
+                sqlite_cmd.Parameters.AddWithValue("@value", conf.value);
+                sqlite_cmd.ExecuteNonQuery();
+            }
+            else
+            {
+                sqlite_datareader.Close();
+                sqlite_cmd.CommandText = "INSERT INTO confs (name,value) VALUES (@name,@value)";
+                sqlite_cmd.Parameters.AddWithValue("@name",conf.name);
+                sqlite_cmd.Parameters.AddWithValue("@value",conf.value);
+                sqlite_cmd.ExecuteNonQuery();
+            }
+            sqlite_conn.Close();
+        }
         public Boolean checkAdminPassword(String user, String password)
         {
             sqlite_conn.Open();
@@ -120,6 +183,7 @@ namespace BilliardsManager
             sqlite_cmd.ExecuteNonQuery();
             sqlite_conn.Close();
         }
+
 
         public void insertRecord(Record record)
         {
@@ -277,9 +341,7 @@ namespace BilliardsManager
                 int id = sqlite_datareader.GetInt32(0);
                 string name = sqlite_datareader.GetString(1);
                 string value = sqlite_datareader.GetString(2);
-                Boolean requireAdmin = sqlite_datareader.GetBoolean(3);
-
-                Conf a = new Conf(id, name, value,requireAdmin);
+                Conf a = new Conf(id, name, value,false);
                 confs.Add(a);
             }
             sqlite_datareader.Close();

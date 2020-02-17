@@ -29,21 +29,36 @@ namespace BilliardsManager
 
             this.tableLayoutPanel1.RowStyles.RemoveAt(0);
 
-            for (int i = 0; i < productosAMostrar.Count(); i++)
+            if (productosAMostrar != null && productosAMostrar.Count != 0)
             {
-                ProductoButton boton = new ProductoButton(productosAMostrar[i]);
-                boton.Text = productosAMostrar[i].getName() + " $"+productosAMostrar[i].getPrecio().ToString();
-                boton.Font = new Font("Microsoft Sans Serif", 20.25F);
-                boton.Dock = DockStyle.Top;
-                boton.MinimumSize = new Size(200, 150);
-                this.tableLayoutPanel1.Controls.Add(boton, 1,i);
-                
-                boton.Click += new EventHandler(delegate (Object o, EventArgs a) {
-                    productos.Add(boton.producto);
-                    Dispose();
-                });
+                for (int i = 0; i < productosAMostrar.Count(); i++)
+                {
+                    ProductoButton boton = new ProductoButton(productosAMostrar[i]);
+                    boton.Text = productosAMostrar[i].getName() + " $" + productosAMostrar[i].getPrecio().ToString();
+                    boton.Font = new Font("Microsoft Sans Serif", 20.25F);
+                    boton.Dock = DockStyle.Top;
+                    boton.MinimumSize = new Size(200, 150);
+                    this.tableLayoutPanel1.Controls.Add(boton, 1, i);
+
+                    boton.Click += new EventHandler(delegate (Object o, EventArgs a)
+                    {
+                        productos.Add(boton.producto);
+                        Dispose();
+                    });
 
 
+                }
+            }
+            else
+            {
+                Label label = new Label();
+                label.Text = "No hay productos para mostrar, para agregar ve a Ajustes -> Administrar Productos";
+                label.Dock = DockStyle.Fill;
+                label.TextAlign = ContentAlignment.MiddleCenter;
+                label.Font = new Font("Microsoft Sans Serif", 25.25F);
+
+                this.tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100));
+                this.tableLayoutPanel1.Controls.Add(label, 1, 0);
             }
         }
 

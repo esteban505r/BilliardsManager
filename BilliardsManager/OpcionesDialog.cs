@@ -34,11 +34,16 @@ namespace BilliardsManager
 
         private void actualizarProductos()
         {
+            Conector c = new Conector();
+            Conf hourValue = c.getConf("hour_value");
+            Conf minuteValue = c.getConf("minute_value");
+            int hValue = Convert.ToInt32(hourValue.value);
+            int mValue = Convert.ToInt32(minuteValue.value);
             if (mesa.productos == null) { mesa.productos = new List<Producto>(); }
             if (stopwatch != null)
             {
-                Producto tiempo = new Producto(0, "Tiempo", (Form1.valorHora * (Convert.ToInt32(stopwatch.Elapsed.TotalHours)))
-                    + (Form1.valorMinuto * (Convert.ToInt32(stopwatch.Elapsed.TotalMinutes))), "tiempo");
+                Producto tiempo = new Producto(0, "Tiempo", (hValue * (Convert.ToInt32(stopwatch.Elapsed.TotalHours)))
+                    + (mValue * (Convert.ToInt32(stopwatch.Elapsed.TotalMinutes))), "tiempo");
 
                 for (int i = 0; i < mesa.productos.Count; i++)
                 {

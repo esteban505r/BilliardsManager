@@ -6,14 +6,17 @@ namespace BilliardsManager
 {
     public partial class Form1 : Form
     {
-        public static int valorHora = 7000;
-        public static int valorMinuto = valorHora/60;
         public Mesa mesaBillar1, mesaBillar2, mesaBillar3, mesaBillar4, mesaBillar5, mesaBillar6, mesaBillar7;
         public Mesa Mesa1, Mesa2, Mesa3, Mesa4, Mesa5, Mesa6;
 
         private void salirToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea salir?", "Salir", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+           
         }
 
         private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)

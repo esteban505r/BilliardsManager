@@ -141,6 +141,12 @@
       <DependentUpon>PedirContraseñaForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Record.cs" />
+    <Compile Include="SettingsOtrosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsOtrosForm.Designer.cs">
+      <DependentUpon>SettingsOtrosForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UtilidadForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,6 +226,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PedirContraseñaForm.resx">
       <DependentUpon>PedirContraseñaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsOtrosForm.resx">
+      <DependentUpon>SettingsOtrosForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UtilidadForm.resx">
       <DependentUpon>UtilidadForm.cs</DependentUpon>

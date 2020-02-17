@@ -24,8 +24,27 @@ namespace BilliardsManager
 
         private void button4_Click(object sender, EventArgs e)
         {
-            AdministrarProductosForm administrarProductosForm = new AdministrarProductosForm();
-            administrarProductosForm.ShowDialog();
+            Conector c = new Conector();
+            if (c.getConf("manage_products_require_admin").Equals("false"))
+            {
+                AdministrarProductosForm administrarProductosForm = new AdministrarProductosForm();
+                administrarProductosForm.ShowDialog();
+            }
+            else
+            {
+                PedirContraseñaForm pedirContraseñaForm = new PedirContraseñaForm();
+                pedirContraseñaForm.ShowDialog();
+                if (pedirContraseñaForm.passed)
+                {
+                    AdministrarProductosForm administrarProductosForm = new AdministrarProductosForm();
+                    administrarProductosForm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Contraseña incorrecta","Error",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                }
+
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -47,6 +66,31 @@ namespace BilliardsManager
                 UtilidadForm utilidadForm = new UtilidadForm(0);
                 utilidadForm.ShowDialog();
             }
+            else
+            {
+                MessageBox.Show("Contraseña incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void groupBox1_Enter_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            PedirContraseñaForm pedirContraseñaForm = new PedirContraseñaForm();
+            pedirContraseñaForm.ShowDialog();
+            if (pedirContraseñaForm.passed)
+            {
+                SettingsOtrosForm otros = new SettingsOtrosForm();
+                otros.Show();
+            }
+            else
+            {
+                MessageBox.Show("Contraseña incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            
         }
     }
 }

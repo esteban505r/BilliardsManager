@@ -67,7 +67,7 @@
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "VerProductosForm";
-            this.Text = "Form2";
+            this.Text = "Ver Productos";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

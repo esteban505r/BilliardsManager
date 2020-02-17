@@ -113,7 +113,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "OpcionesDialog";
-            this.Text = "Form2";
+            this.Text = "Mesa";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
